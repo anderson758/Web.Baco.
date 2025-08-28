@@ -1,0 +1,265 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: xx-large;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: normal;
+
+}
+
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: normal;
+}
+
+h4{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: normal;
+}
+
+h5{
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    font-size: normal;
+}
+
+h6{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: normal;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: normal;
+}
+
+html, body{
+    width: 100%;
+    height: 100hv;
+    overflow-x: hidden;
+    font-family: 'Poppins', 'sans_serif';
+    background: linear-gradient(135deg, #050506, #561321);
+    color: #fff;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: rgba(10, 10, 30, 0.8);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(236, 33, 33, 0.2); 
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.nav-logo{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #8a2be2;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px rgba(249, 248, 250, 0.921);
+    letter-spacing: 1px;
+}
+
+.nav.links{
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 3.0s ease;
+    position: relative;
+}
+
+nav.links a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #8a2be2;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover{
+    color: #fff;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
+}
+
+.nav.contact{
+    
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 6px  20px rgb(255, 255, 255);
+}
+
+.nav-contact:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px  20px rgba(138, 43, 226, 0.2);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-self: space-around;
+    padding: 100hv;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.content{
+    flex: 1 1 45%;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.buttons{
+    display: contents;
+    gap: 1.5rem;   
+}
+
+.buttons button{
+    background: transparent;
+    border: 2px solid #f3082b;
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.buttons button::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(135deg, #8a2be2);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.buttons button:hover::before{
+    width: 100%;
+}
+
+button button:first-child{
+    background: linear-gradient(135deg, #8a2be2);
+    box-shadow: 0 4px  15px rgba(228, 12, 12, 0.2);
+}
+
+button button:first-child:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px  20px rgba(242, 25, 39, 0.2);
+}
+
+.social-icons{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    background: rgba(222, 11, 11, 0.1);
+    border-radius: 50%;
+    color: #8a2be2;
+    font-size: 1.2rem;
+    transition: all 0.3 ease;
+    border: 1px solid gba(138, 43, 226, 0.2);
+}
+
+.social-icons a:hover{
+    background: gba(138, 43, 226, 0.2);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px  15px rgba(138, 43, 226, 0.2);
+}
+
+.bg-main-container{
+    flex:1 1 45%;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    max-width: 600px;
+}
+
+.bg-main{
+    width: 100%;
+    height: 375px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-elements::before,
+.background-elements::after{
+    content: '';
+    position: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle,rgb(230, 229, 232));
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(20px);
+}
+
+input, button{
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 16px;
+}
+
+button{
+    background-color: rgb(5, 88, 232);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: rgb(0, 0, 0);
+}
+
